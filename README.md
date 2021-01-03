@@ -1,5 +1,7 @@
 <img src="/misc/krabs-cover.png" />
 
+[![Build Status](https://www.travis-ci.com/micheleriva/krabs.svg?branch=main)](https://www.travis-ci.com/micheleriva/krabs)
+
 **Krabs** is an enterprise-ready Express.js middleware for serving hundreds of different websites from a single Next.js instance.
 
 Work in progress.

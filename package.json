@@ -27,6 +27,7 @@
     "array-flat-polyfill": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "codecov": "^3.8.1",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
