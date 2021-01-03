@@ -17,6 +17,23 @@ yarn add krabs
 npm install --save krabs
 ```
 
+# Roadmap
+
+| Feature | Status |
+| ------- | ------ |
+| Multiple domains support | ✅ Released         |
+| Regex-based domains      | ✅ Released         |
+| Dynamic paths            | ✅ Released         |
+| Force ISR reload         | 🚧 Work in progress |
+| Tenant props injection   | 🚧 Work in progress |
+
+Overall status: 🎉 production ready
+
+# Things to know
+
+- Krabs forces you to use a custom server. Therefore, deployments to Vercel are not supported.
+- `_app` and `_document` pages are common to every website.
+
 # Getting Started
 
 Let's say that we want to support three different websites with just one Next.js instance, and serve them using just one Express.js server.
