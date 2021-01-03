@@ -1,14 +1,36 @@
-import { Request, Response, Express } from 'express';
-import Server from 'next/types';
+import { Request, Response } from 'express';
+import { parse } from 'url';
 import { getTenantConfig } from './config';
 import findTenant from './tenants/findTenant';
+import resolveRoutes from './routes/resolve';
 
-function krabs(req: Request, res: Response, handle: Server, app: Express): void {
+function krabs(req: Request, res: Response, handle: any, app: any): void {
   const { tenants } = getTenantConfig();
   const { hostname } = req;
-
+  const parsedUrl = parse(req.url, true);
+  const { pathname = '/', query } = parsedUrl;
   const tenant = findTenant(tenants, hostname);
 
+  if (!tenant) {
+    res.status(500);
+    res.end();
+    return;
+  }
+
+  if (pathname?.startsWith('/_next')) {
+    handle(req, res);
+    return;
+  }
+
+  const route = resolveRoutes(tenant.name, String(pathname));
+
+  if (route) {
+    app.render(req, res, route, query);
+    return;
+  }
+
+  handle(req, res);
+  return;
 }
 
 export default krabs;
