@@ -3,6 +3,7 @@ export type Env = 'dev' | 'development' | 'prod' | 'production' | 'stage' | 'sta
 export type DomainSpec = string | RegExp;
 
 export type Domain = {
+  // @ts-ignore
   [env: Env]: DomainSpec;
 };
 

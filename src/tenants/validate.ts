@@ -2,10 +2,11 @@ import { Tenant, Domain, DomainSpec } from '../config/config.d';
 import 'array-flat-polyfill';
 
 export function concatDomains(acc: string[], domain: Domain): string[] {
-  const domainsAsStrings: string[] = Object.values(domain).map((domain) =>
+  const domainsAsStrings = Object.values(domain).map((domain) =>
     domain instanceof RegExp ? domain.toString() : domain,
   );
 
+  // @ts-ignore
   return [...acc, ...domainsAsStrings];
 }
 

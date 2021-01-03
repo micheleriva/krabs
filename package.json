@@ -1,8 +1,10 @@
 {
   "name": "krabs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Multitenant middleware for Next.js",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["/dist"],
   "repository": "https://github.com/MicheleRiva/krabs",
   "author": "Michele Riva <ciao@micheleriva.it>",
   "license": "GPL-3.0",
@@ -10,10 +12,11 @@
   "scripts": {
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
     "lint": "eslint --fix .",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepare": "npm run test && npm run build",
+    "build": "tsc src/index.ts --outDir dist --declarationDir dist --declaration true"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
     "express": "^4.17.1",
     "next": "^10.0.4"
   },
