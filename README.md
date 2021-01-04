@@ -139,7 +139,7 @@ Map `local.website-1.com` and `local.website-2.com` in your hosts file, then boo
 node index.js
 ```
 
-going to http://local.website-1.com/about and http://local.website-2.com/about, you will see the components above rendered by the same Next.js instance!
+going to http://dev.pizza.local.website-1.com/about and http://local.website-2.com/about, you will see the components above rendered by the same Next.js instance!
 
 # Documentation
 
