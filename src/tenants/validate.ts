@@ -5,8 +5,6 @@ export function concatDomains(acc: string[], domain: Domain): string[] {
   const domainsAsStrings = Object.values(domain).map((domain) =>
     domain instanceof RegExp ? domain.toString() : domain,
   );
-
-  // @ts-ignore
   return [...acc, ...domainsAsStrings];
 }
 
