@@ -1,15 +1,15 @@
-export type Env = 'dev' | 'development' | 'prod' | 'production' | 'stage' | 'staging';
+export type Env = 'test' | 'dev' | 'development' | 'prod' | 'production' | 'stage' | 'staging';
 
 export type DomainSpec = string | RegExp;
 
 export type Domain = {
-  // @ts-ignore
-  [env: Env]: DomainSpec;
+  [key in Env]: DomainSpec
 };
 
+type NonEmptyArray<A> = A[]
 export type Tenant = {
   name: string;
-  domains: Domain[];
+  domains: NonEmptyArray<Domain>;
 };
 
 export type Config = {
