@@ -18,12 +18,9 @@ export function getCurrentEnv(): Env {
   const currentEnv = process.env.NODE_ENV || 'dev';
   const validEnvs: Env[] = ['dev', 'stage', 'prod', 'development', 'staging', 'production'];
 
-  // @ts-ignore
-  if (!validEnvs.includes(currentEnv)) {
+  if (!validEnvs.includes(currentEnv as Env)) {
     console.error(`Invalid Node process environment: ${currentEnv}`);
     process.exit(1);
   }
-
-  // @ts-ignore
-  return currentEnv;
+  return currentEnv as Env;
 }
