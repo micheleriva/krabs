@@ -9,7 +9,7 @@
 - [Roadmap](#roadmap)
 - [Thinks to know](#things-to-know)
 - [Installation](#installation)
-- [Getting started)(#getting-started)
+- [Getting started](#getting-started)
 - [Documentation](#documentation)
 - [License](#license)
 
