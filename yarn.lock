@@ -2442,7 +2442,7 @@ chalk@4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.0.tgz#4e14870a618d9e2edd97dd8345fd9d9dc315646a"
   integrity sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A==
@@ -5376,6 +5376,14 @@ klona@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
+
+krabs@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.2.tgz#b17ee1adfc70e8d0963851b2c5487a84f49d42c5"
+  integrity sha512-adpQb6wGPKbZhSK6OOdBmlZbNZqPJ1GYd51iimq+Vt6+CQ9rL4P8cv/EfxOsJtxOqfP4+qu3cUB9T8M9a8do3w==
+  dependencies:
+    express "^4.17.1"
+    next "^10.0.4"
 
 language-subtag-registry@~0.3.2:
   version "0.3.21"
