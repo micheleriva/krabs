@@ -5,6 +5,14 @@
 
 **Krabs** is an enterprise-ready Express.js middleware for serving hundreds of different websites from a single Next.js instance.
 
+- [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Thinks to know](#things-to-know)
+- [Installation](#installation)
+- [Getting started)(#getting-started)
+- [Documentation](#documentation)
+- [License](#license)
+
 # Installation
 
 Krabs is available on **npm** and can be installed as follows:
@@ -24,8 +32,8 @@ npm install --save krabs
 | Multiple domains support | ✅ Released         |
 | Regex-based domains      | ✅ Released         |
 | Dynamic paths            | ✅ Released         |
-| Force ISR reload         | 🚧 Work in progress |
-| Tenant props injection   | 🚧 Work in progress |
+| Force ISR reload         | 💡 In roadmap       |
+| Tenant props injection   | 💡 In roadmap       |
 
 Overall status: 🎉 production ready
 
@@ -135,7 +143,7 @@ going to http://local.website-1.com/about and http://local.website-2.com/about, 
 
 # Documentation
 
-Please refer to the [wiki](https://github.com/micheleriva/krabs/wiki) section for documentation about **Krabs**!
+You can find the full documentation (with real code examples) on [GitBook](https://micheleriva.gitbook.io/krabs/)!
 
 # License
 
