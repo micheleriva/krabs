@@ -6,7 +6,7 @@ export type Domain = {
   [key in Env]: DomainSpec
 };
 
-type NonEmptyArray<A> = A[]
+type NonEmptyArray<A> = A[]& { 0: A };
 export type Tenant = {
   name: string;
   domains: NonEmptyArray<Domain>;
