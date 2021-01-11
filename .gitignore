@@ -2,7 +2,7 @@ dev
 .krabs.js
 coverage
 ./pages
-public
+./public
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,osx,visualstudiocode,intellij,windows,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,osx,visualstudiocode,intellij,windows,linux
