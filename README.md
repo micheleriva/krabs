@@ -7,7 +7,7 @@
 
 - [Installation](#installation)
 - [Roadmap](#roadmap)
-- [Thinks to know](#things-to-know)
+- [Things to know](#things-to-know)
 - [Installation](#installation)
 - [Getting started](#getting-started)
 - [Documentation](#documentation)
@@ -27,13 +27,13 @@ npm install --save krabs
 
 # Roadmap
 
-| Feature | Status |
-| ------- | ------ |
-| Multiple domains support | ✅ Released         |
-| Regex-based domains      | ✅ Released         |
-| Dynamic paths            | ✅ Released         |
-| Force ISR reload         | 💡 In roadmap       |
-| Tenant props injection   | 💡 In roadmap       |
+| Feature                  | Status        |
+| ------------------------ | ------------- |
+| Multiple domains support | ✅ Released   |
+| Regex-based domains      | ✅ Released   |
+| Dynamic paths            | ✅ Released   |
+| Force ISR reload         | 💡 In roadmap |
+| Tenant props injection   | 💡 In roadmap |
 
 Overall status: 🎉 production ready
 
@@ -93,7 +93,6 @@ async function main() {
     server
       .get('*', (req, res) => krabs(req, res, handle, app))
       .listen(3000, () => console.log('server ready'));
-
   } catch (err) {
     console.log(err.stack);
   }
@@ -117,7 +116,7 @@ Let's add the following content to `pages/website-1/about.js`:
 
 ```jsx
 function About() {
-  return <div> About website 1 </div>
+  return <div> About website 1 </div>;
 }
 
 export default About;
@@ -127,7 +126,7 @@ and the following code to `pages/website-2/about.js`:
 
 ```jsx
 function About() {
-  return <div> This is website 2 </div>
+  return <div> This is website 2 </div>;
 }
 
 export default About;
