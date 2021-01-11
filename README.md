@@ -2,6 +2,7 @@
 
 [![Build Status](https://www.travis-ci.com/micheleriva/krabs.svg?branch=main)](https://www.travis-ci.com/micheleriva/krabs)
 [![codecov](https://codecov.io/gh/micheleriva/krabs/branch/main/graph/badge.svg?token=s46QYu6uUJ)](https://codecov.io/gh/micheleriva/krabs)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/krabs)](https://bundlephobia.com/result?p=krabs@latest)
 
 **Krabs** is an enterprise-ready Express.js middleware for serving hundreds of different websites from a single Next.js instance.
 
