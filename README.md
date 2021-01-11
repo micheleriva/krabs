@@ -148,3 +148,7 @@ You can find the full documentation (with real code examples) on [GitBook](https
 # License
 
 Krabs is _free as freedom_ and licensed under the [**GPL V3** license](/LICENSE.md).
+
+<br />
+
+<img src="/misc/krabs-bottom.png" />
