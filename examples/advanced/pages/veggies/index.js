@@ -17,7 +17,7 @@ function Index(props) {
   return (
     <div>
       <div>
-        <img src={image} className="w-4/6" />
+        <img src={image} alt="Veggies are good" className="w-4/6" />
       </div>
       <p className="mt-10 mb-10">
         Praesent auctor dui vitae magna aliquam, eu pretium nulla volutpat. Sed quis orci id lorem

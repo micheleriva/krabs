@@ -5,19 +5,23 @@ const EnglishsetterloversLayout = dynamic(() =>
   import('../components/Layouts/EnglishSetterLovers'),
 );
 
-const Layout = {
-  'local.cabbage.eat.com': VeggiesLayout,
-  'local.pumpkin.eat.com': VeggiesLayout,
-  'local.veggies.eat.com': VeggiesLayout,
-  'cabbage.krabs.eat.micheleriva.com': VeggiesLayout,
-  'pumpkin.krabs.eat.micheleriva.com': VeggiesLayout,
-  'veggies.krabs.eat.micheleriva.com': VeggiesLayout,
-  'local.englishsetterlovers.com': EnglishsetterloversLayout,
-  'englishsetterlovers.krabs.micheleriva.com': EnglishsetterloversLayout,
-};
+function getLayout(tenant) {
+  switch (tenant) {
+    case 'local.cabbage.eat.com':
+    case 'local.pumpkin.eat.com':
+    case 'local.veggies.eat.com':
+    case 'cabbage.krabs.eat.micheleriva.com':
+    case 'pumpkin.krabs.eat.micheleriva.com':
+    case 'veggies.krabs.eat.micheleriva.com':
+      return VeggiesLayout;
+    case 'local.englishsetterlovers.com':
+    case 'englishsetterlovers.krabs.micheleriva.com':
+      return EnglishsetterloversLayout;
+  }
+}
 
 function App({ Component, pageProps }) {
-  const TenantLayout = Layout[pageProps.tenant];
+  const TenantLayout = getLayout(pageProps.tenant);
 
   return (
     <TenantLayout>

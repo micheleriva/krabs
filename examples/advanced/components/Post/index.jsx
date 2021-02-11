@@ -6,7 +6,7 @@ function Post({ title, image, subtitle, slug }) {
       <div className="cursor-pointer">
         <div>
           {' '}
-          <img src={image} />{' '}
+          <img src={image} alt={title} />{' '}
         </div>
         <div className="font-bold text-2xl mt-2 mb-2"> {title} </div>
         <div> {subtitle} </div>

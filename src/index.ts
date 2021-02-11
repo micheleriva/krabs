@@ -26,6 +26,8 @@ function krabs(req: Request, res: Response, handle: any, app: any, config?: Conf
   const route = resolveRoutes(tenant.name, String(pathname));
 
   if (route) {
+    // @ts-ignore
+    req.tenant = tenant;
     app.render(req, res, route, query);
     return;
   }
