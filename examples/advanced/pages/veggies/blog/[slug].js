@@ -1,23 +1,6 @@
 import { useRouter } from 'next/router';
 import posts from '../../../data/veggies/posts';
 
-export function getStaticPaths() {
-  return {
-    paths: posts.map((post) => ({
-      params: { slug: post.slug },
-    })),
-    fallback: true,
-  };
-}
-
-export function getStaticProps(ctx) {
-  return {
-    props: {
-      foo: 'bar',
-    },
-  },
-};
-
 function Slug() {
   const router = useRouter();
   const post = posts.find((post) => post.slug === router.query.slug);

@@ -5,23 +5,12 @@ const EnglishsetterloversLayout = dynamic(() =>
   import('../components/Layouts/EnglishSetterLovers'),
 );
 
-function getLayout(tenant) {
-  switch (tenant) {
-    case 'local.cabbage.eat.com':
-    case 'local.pumpkin.eat.com':
-    case 'local.veggies.eat.com':
-    case 'cabbage.krabs.eat.micheleriva.com':
-    case 'pumpkin.krabs.eat.micheleriva.com':
-    case 'veggies.krabs.eat.micheleriva.com':
-      return VeggiesLayout;
-    case 'local.englishsetterlovers.com':
-    case 'englishsetterlovers.krabs.micheleriva.com':
-      return EnglishsetterloversLayout;
-  }
-}
-
+const layout = {
+  veggies: VeggiesLayout,
+  englishsetterlovers: EnglishsetterloversLayout,
+};
 function App({ Component, pageProps }) {
-  const TenantLayout = getLayout(pageProps.tenant);
+  const TenantLayout = layout[pageProps.tenant];
 
   return (
     <TenantLayout>
@@ -31,7 +20,7 @@ function App({ Component, pageProps }) {
 }
 
 App.getInitialProps = async ({ Component, ctx }) => {
-  const tenant = ctx?.req?.hostname;
+  const tenant = ctx?.req?.tenant?.name;
   let pageProps = {};
 
   if (Component.getInitialProps) {
