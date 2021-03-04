@@ -105,8 +105,14 @@ const configExampleAsAsyncFn = {
   ],
 };
 
-test('testing mock', async () => {
+test('getTenantConfig', async () => {
   expect(await conf.getTenantConfig(configExampleAsObj)).toMatchSnapshot();
   expect(await conf.getTenantConfig(configExampleAsFn)).toMatchSnapshot();
   expect(await conf.getTenantConfig(configExampleAsAsyncFn)).toMatchSnapshot();
+});
+
+describe('getCwdConfig', () => {
+  it('should correctly resolve the config file from a mocked filesystem', () => {
+    expect(conf.getCwdConfig()).toMatchSnapshot();
+  });
 });

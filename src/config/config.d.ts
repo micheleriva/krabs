@@ -1,7 +1,7 @@
 export type DomainSpec = string | RegExp;
 
 export type Domain = {
-  [string]: DomainSpec;
+  [key: string]: DomainSpec;
 };
 
 type NonEmptyArray<A> = A[] & { 0: A };

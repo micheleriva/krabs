@@ -1,17 +1,9 @@
 import { join } from 'path';
 import { Config, ConfigEntry } from './config.d';
 
-function getCwdConfig() {
-  try {
-    const configFile = join(process.cwd(), '.krabs.js');
-    return require(configFile);
-  } catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND')
-      console.error('Unable to find krabs.js configuration file.');
-
-    console.log(err);
-    process.exit(1);
-  }
+export function getCwdConfig() {
+  const configFile = join(process.cwd(), '.krabs.js');
+  return require(configFile);
 }
 
 export async function getTenantConfig(conf?: ConfigEntry): Promise<Config> {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing mock 1`] = `
+exports[`getCwdConfig should correctly resolve the config file from a mocked filesystem 1`] = `
 Object {
   "tenants": Array [
     Object {
@@ -37,7 +37,7 @@ Object {
 }
 `;
 
-exports[`testing mock 2`] = `
+exports[`getTenantConfig 1`] = `
 Object {
   "tenants": Array [
     Object {
@@ -74,7 +74,44 @@ Object {
 }
 `;
 
-exports[`testing mock 3`] = `
+exports[`getTenantConfig 2`] = `
+Object {
+  "tenants": Array [
+    Object {
+      "domains": Array [
+        Object {
+          "dev": "local.website-1.com",
+          "prod": "website-1.com",
+          "stage": "stage.website-1.com",
+        },
+      ],
+      "name": "website-1",
+    },
+    Object {
+      "domains": Array [
+        Object {
+          "dev": "local.website-2.com",
+          "prod": "website-2.com",
+          "stage": "stage.website-2.com",
+        },
+      ],
+      "name": "website-2",
+    },
+    Object {
+      "domains": Array [
+        Object {
+          "dev": "local.website-3.com",
+          "prod": "website-3.com",
+          "stage": "stage.website-3.com",
+        },
+      ],
+      "name": "website-3",
+    },
+  ],
+}
+`;
+
+exports[`getTenantConfig 3`] = `
 Object {
   "tenants": Array [
     Object {
