@@ -1,7 +1,7 @@
 import { join } from 'path';
-import { Env, Config } from './config.d';
+import { Config, ConfigEntry } from './config.d';
 
-export function getTenantConfig(): Config {
+function getCwdConfig() {
   try {
     const configFile = join(process.cwd(), '.krabs.js');
     return require(configFile);
@@ -14,13 +14,19 @@ export function getTenantConfig(): Config {
   }
 }
 
-export function getCurrentEnv(): Env {
-  const currentEnv = process.env.NODE_ENV || 'dev';
-  const validEnvs: Env[] = ['dev', 'stage', 'prod', 'development', 'staging', 'production'];
+export async function getTenantConfig(conf?: ConfigEntry): Promise<Config> {
+  if (!conf) conf = getCwdConfig();
+  const confType = typeof conf;
 
-  if (!validEnvs.includes(currentEnv as Env)) {
-    console.error(`Invalid Node process environment: ${currentEnv}`);
-    process.exit(1);
+  switch (confType) {
+    case 'function':
+      // @ts-expect-error
+      return conf();
+    case 'object':
+      return (conf as unknown) as Promise<Config>;
+    default:
+      throw Error(
+        `Unknown configuration type. Expected one of: function, object, JSON, got: ${confType}`,
+      );
   }
-  return currentEnv as Env;
 }

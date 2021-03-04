@@ -3,8 +3,9 @@ import { Tenant, DomainSpec } from '../config/config.d';
 export function findTenant(tenants: Tenant[], hostname: string): Tenant | undefined {
   return tenants.find((tenant: Tenant) => {
     const domains = tenant.domains.reduce(
+      // @ts-ignore
       (acc, current) => [...acc, ...Object.values(current)] as never,
-      []
+      [],
     ) as DomainSpec[];
 
     if (domains.includes(hostname)) {

@@ -12,7 +12,7 @@
     "noImplicitAny": true,
     "strictFunctionTypes": true,
     "alwaysStrict": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,

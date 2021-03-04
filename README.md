@@ -28,13 +28,13 @@ npm install --save krabs
 
 # Roadmap
 
-| Feature                  | Status        |
-| ------------------------ | ------------- |
-| Multiple domains support | ✅ Released   |
-| Regex-based domains      | ✅ Released   |
-| Dynamic paths            | ✅ Released   |
-| Force ISR reload         | 💡 In roadmap |
-| Tenant props injection   | 💡 In roadmap |
+| Feature                  | Status      |
+| ------------------------ | ----------- |
+| Multiple domains support | ✅ Released |
+| Regex-based domains      | ✅ Released |
+| Dynamic paths            | ✅ Released |
+| Tenant props injection   | ✅ Released |
+| Async config file        | ✅ Released |
 
 Overall status: 🎉 production ready
 

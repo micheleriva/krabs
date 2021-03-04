@@ -5,8 +5,14 @@ import { Config } from './config/config.d';
 import findTenant from './tenants/findTenant';
 import resolveRoutes from './routes/resolve';
 
-function krabs(req: Request, res: Response, handle: any, app: any, config?: Config): void {
-  const { tenants } = config || getTenantConfig();
+async function krabs(
+  req: Request,
+  res: Response,
+  handle: any,
+  app: any,
+  config?: Config,
+): Promise<void> {
+  const { tenants } = config || (await getTenantConfig());
   const { hostname } = req;
   const parsedUrl = parse(req.url, true);
   const { pathname = '/', query } = parsedUrl;
