@@ -1,6 +1,7 @@
 .krabs.js
 coverage
 ./pages/*
+./pages
 ./public
 ./index.ts
 
