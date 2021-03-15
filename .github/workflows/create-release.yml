@@ -1,0 +1,22 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  push_to_registry:
+    name: Create Git Tag
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Create release
+        uses: rymndhng/release-on-push-action@master
+        with:
+          bump_version_scheme: patch
