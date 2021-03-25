@@ -46,7 +46,7 @@ Overall status: 🎉 production ready
 # Getting Started
 
 Let's say that we want to support three different websites with just one Next.js instance, and serve them using just one Express.js server.
-Write the following configuration inside a `.krabs.js` file inside of the root of your project:
+Write the following configuration inside a `.krabs.js` or `.krabs.config.js` file inside of the root of your project:
 
 ```js
 module.exports = {
