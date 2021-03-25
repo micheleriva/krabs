@@ -35,7 +35,7 @@ const configExampleAsObj = {
   ],
 };
 
-const configExampleAsFn = {
+const configExampleAsFn = () => ({
   tenants: [
     {
       name: 'website-1',
@@ -68,9 +68,9 @@ const configExampleAsFn = {
       ],
     },
   ],
-};
+});
 
-const configExampleAsAsyncFn = {
+const configExampleAsAsyncFn = async () => ({
   tenants: [
     {
       name: 'website-1',
@@ -103,16 +103,18 @@ const configExampleAsAsyncFn = {
       ],
     },
   ],
-};
+});
 
 test('getTenantConfig', async () => {
   expect(await conf.getTenantConfig(configExampleAsObj)).toMatchSnapshot();
   expect(await conf.getTenantConfig(configExampleAsFn)).toMatchSnapshot();
   expect(await conf.getTenantConfig(configExampleAsAsyncFn)).toMatchSnapshot();
-});
 
-describe('getCwdConfig', () => {
-  it('should correctly resolve the config file from a mocked filesystem', () => {
-    expect(conf.getCwdConfig()).toMatchSnapshot();
-  });
+  try {
+    await conf.getTenantConfig('Wrong config');
+  } catch (e) {
+    expect(e).toMatchInlineSnapshot(
+      `[Error: Unknown configuration type. Expected one of: function, object, JSON, got: string]`,
+    );
+  }
 });

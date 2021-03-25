@@ -4,7 +4,7 @@ import { Config, ConfigEntry } from './config.d';
 
 export function getCwdConfig() {
   const validConfigNames = ['.krabs.js', 'krabs.config.js'];
-  
+
   for (const name of validConfigNames) {
     const configFile = join(process.cwd(), name);
 
