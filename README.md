@@ -45,6 +45,12 @@ Overall status: 🎉 production ready
 
 # Getting Started
 
+You can watch a video introduction on **YouTube**:
+
+<a href="https://www.youtube.com/watch?v=71NRAnT4G4Q" target="_blank">
+  <img src="/misc/krabs-yt-intro.png" />
+</a>
+
 Let's say that we want to support three different websites with just one Next.js instance, and serve them using just one Express.js server.
 Write the following configuration inside a `.krabs.js` or `.krabs.config.js` file inside of the root of your project:
 
@@ -102,7 +108,7 @@ async function main() {
 main();
 ```
 
-Inside of our `.krabs.js` file we configured two tenants with two different `name` properties: `website-1` and `website-2`.
+Inside our `.krabs.js` file, we configured two tenants with two different `name` properties: `website-1` and `website-2`.
 So now let's create two new folders inside of the Next.js' default `pages/` directory:
 
 ```txt
