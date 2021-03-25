@@ -1,3 +1,4 @@
+import mockFs from 'mock-fs';
 import * as conf from './';
 
 const configExampleAsObj = {
@@ -113,8 +114,33 @@ test('getTenantConfig', async () => {
   try {
     await conf.getTenantConfig('Wrong config');
   } catch (e) {
+    // eslint-disable-next-line
     expect(e).toMatchInlineSnapshot(
       `[Error: Unknown configuration type. Expected one of: function, object, JSON, got: string]`,
     );
   }
+});
+
+test('getCwdConfig throwing an error', () => {
+  mockFs({
+    '.k.config.js': {}, // wrong file name, should not be resolved
+  });
+  expect(conf.getCwdConfig).toThrowErrorMatchingInlineSnapshot(`"No configuration file found"`);
+  mockFs.restore();
+});
+
+test('getCwdConfig on .krabs.config.js file', () => {
+  mockFs({
+    '.krabs.config.js': configExampleAsFn(),
+  });
+  expect(conf.getCwdConfig).toMatchSnapshot();
+  mockFs.restore();
+});
+
+test('getCwdConfig on .krabs.js file', () => {
+  mockFs({
+    '.krabs.js': configExampleAsFn(),
+  });
+  expect(conf.getCwdConfig).toMatchSnapshot();
+  mockFs.restore();
 });

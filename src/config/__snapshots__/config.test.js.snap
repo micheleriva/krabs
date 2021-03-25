@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`getCwdConfig on .krabs.config.js file 1`] = `[Function]`;
+
+exports[`getCwdConfig on .krabs.js file 1`] = `[Function]`;
+
 exports[`getTenantConfig 1`] = `
 Object {
   "tenants": Array [
