@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Testing Krabs "findTenant" against a large number of vhosts 1`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": "local.1.website.com",
+      "test": "test.1.website.com",
+    },
+    Object {
+      "test": "test.1.1.website.com",
+    },
+  ],
+  "name": "website-1.com",
+}
+`;
+
+exports[`Testing Krabs "findTenant" against a large number of vhosts 2`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": "local.999.website.com",
+      "test": "test.999.website.com",
+    },
+    Object {
+      "test": "test.999.999.website.com",
+    },
+  ],
+  "name": "website-999.com",
+}
+`;
+
+exports[`Testing Krabs "findTenant" against a large number of vhosts 3`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": "local.99999.website.com",
+      "test": "test.99999.website.com",
+    },
+    Object {
+      "test": "test.99999.99999.website.com",
+    },
+  ],
+  "name": "website-99999.com",
+}
+`;
+
+exports[`Testing Krabs "findTenant" against a large number of vhosts 4`] = `undefined`;
+
+exports[`Testing Krabs "findTenant" against a large number of vhosts 5`] = `undefined`;
+
 exports[`findTenant should find the right tenant 1`] = `
 Object {
   "domains": Array [

@@ -144,3 +144,21 @@ test('getCwdConfig on .krabs.js file', () => {
   expect(conf.getCwdConfig).toMatchSnapshot();
   mockFs.restore();
 });
+
+test('Testing Krabs config against a large number of vhosts', async () => {
+  let config = [];
+
+  for (let i = 0; i < 10_000; i++) {
+    config.push({
+      name: `website-${i}.com`,
+      domains: [
+        {
+          test: `test.${i}.website.com`,
+          dev: `local.${i}.website.com`,
+        },
+      ],
+    });
+  }
+
+  expect(await conf.getTenantConfig(config)).toMatchSnapshot();
+});
