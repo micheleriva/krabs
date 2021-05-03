@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`findTenant should find the right tenant 1`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": "local.website-1.com",
+      "test": "test.website-1.com",
+    },
+    Object {
+      "development": "local.dev.website-2.com",
+      "prod": "prod.website-2.com",
+      "test": "test.website-2.com",
+    },
+  ],
+  "name": "website-1",
+}
+`;
+
+exports[`findTenant should find the right tenant 2`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": /local\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+      "test": /test\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+    },
+  ],
+  "name": "website-2",
+}
+`;
+
+exports[`findTenant should find the right tenant 3`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": /local\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+      "test": /test\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+    },
+  ],
+  "name": "website-2",
+}
+`;
+
+exports[`findTenant should find the right tenant 4`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": /local\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+      "test": /test\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+    },
+  ],
+  "name": "website-2",
+}
+`;
+
+exports[`findTenant should find the right tenant 5`] = `
+Object {
+  "domains": Array [
+    Object {
+      "dev": /local\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+      "test": /test\\\\\\.website-2\\\\\\.\\[a-z\\]\\*\\\\\\.com/,
+    },
+  ],
+  "name": "website-2",
+}
+`;

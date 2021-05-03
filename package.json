@@ -14,7 +14,7 @@
   "scripts": {
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
     "lint": "eslint --fix .",
-    "test": "jest --coverage",
+    "test": "NODE_ENV=test && jest --coverage",
     "prepare": "npm run test && npm run build",
     "build": "tsc src/index.ts --outDir dist --declarationDir dist --declaration true"
   },
