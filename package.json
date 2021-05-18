@@ -19,6 +19,7 @@
     "build": "tsc src/index.ts --outDir dist --declarationDir dist --declaration true"
   },
   "dependencies": {
+    "chalk": "^4.1.1",
     "express": "^4.17.1",
     "krabs": "^0.0.2",
     "next": "^10.0.4"
