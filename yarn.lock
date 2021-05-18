@@ -5393,6 +5393,15 @@ krabs@^0.0.2:
     express "^4.17.1"
     next "^10.0.4"
 
+krabs@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.8.tgz#04d633abe43f6225f8526ab76c6567a779593386"
+  integrity sha512-HdFsQKidWDN3B2HaEkBk1RmJkMyvceS5461Xy7ikkoZeQGT3/hg+mPPHRh/+3NiXDi4HBgvOAqNJDsGi2Dm9SQ==
+  dependencies:
+    express "^4.17.1"
+    krabs "^0.0.2"
+    next "^10.0.4"
+
 language-subtag-registry@~0.3.2:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz#04ac218bea46f04cb039084602c6da9e788dd45a"

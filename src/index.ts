@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import { parse } from 'url';
 import { getTenantConfig } from './config';
 import { Config } from './config/config.d';
