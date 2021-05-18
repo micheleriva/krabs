@@ -1,6 +1,6 @@
 {
   "name": "krabs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Multitenant middleware for Next.js",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
