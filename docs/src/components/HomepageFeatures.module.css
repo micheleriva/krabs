@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   padding-top: 5em;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
 
 .multitenant-image img {
@@ -14,10 +14,14 @@
   width: 800px;
 }
 
+@media screen and (max-width: 720px) {
+  .multitenant-image img {
+    display: none;
+  }
+}
+
 .description {
-  width: 100%;
   text-align: center;
-  font-size: xx-large;
-  padding-bottom: 2em;
-  font-weight: bold;
+  width: 100%;
+  padding-bottom: 5em;
 }

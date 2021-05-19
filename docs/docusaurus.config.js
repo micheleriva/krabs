@@ -18,15 +18,15 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
+          to: '/docs/intro',
+          label: 'Docs',
           position: 'left',
-          label: 'Tutorial',
         },
         {
-          to: '/blog',
-          label: 'Blog',
+          type: 'doc',
+          to: '/docs/tutorial-basics/getting-started',
           position: 'left',
+          label: 'Tutorial',
         },
         {
           href: 'https://github.com/micheleriva/krabs',

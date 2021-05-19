@@ -11,13 +11,18 @@ function HomepageHeader() {
     <header className={styles.heroBanner}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          Krabs is an enterprise-ready Express.js middleware <br />
+          for serving <b>thousands*</b> of different websites from a single Next.js instance.
+        </p>
+        <p>*Tested up to 3M tenants!</p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
+          <Link className="button button--secondary button--lg" to="/docs/intro">
             Krabs Tutorial - 5min ⏱️
           </Link>
+        </div>
+        <div className={styles['krabs-image']}>
+          <img src="/img/krabs-small.png" alt="Mr Krabs" />
         </div>
       </div>
     </header>
@@ -27,9 +32,7 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title} - ${siteConfig.tagline}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout title={`${siteConfig.title} - ${siteConfig.tagline}`} description={siteConfig.tagline}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

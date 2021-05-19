@@ -1,0 +1,5 @@
+---
+title: Krabs Configuration
+---
+
+lorem

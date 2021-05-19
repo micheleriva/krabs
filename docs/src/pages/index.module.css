@@ -10,8 +10,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: #c62828;
   color: #f5f5f5;
+  background: rgb(175,25,25);
+  background: linear-gradient(90deg, rgba(175,25,25,1) 0%, rgba(250,68,68,1) 100%);
 }
 
 @media screen and (max-width: 966px) {
@@ -24,4 +25,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.krabs-image {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+
+.krabs-image img {
+  max-width: 230px;
 }

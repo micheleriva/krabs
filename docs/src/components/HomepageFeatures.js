@@ -10,8 +10,7 @@ export default function HomepageFeatures() {
             <img src="/img/multitenant-example.png" alt="Multi-tenant example" />
           </div>
           <div className={styles.description}>
-            Krabs is an enterprise-ready Express.js middleware <br />
-            for serving thousands of different websites from a single Next.js instance.
+            Serve thousands of different websites from a single Next.js installation
           </div>
         </div>
       </div>
