@@ -7,7 +7,7 @@ export default function HomepageFeatures() {
       <div className="container">
         <div className="row">
           <div className={styles['multitenant-image']}>
-            <img src="/img/multitenant-example.png" alt="Multi-tenant example" />
+            <img src="/krabs/img/multitenant-example.png" alt="Multi-tenant example" />
           </div>
           <div className={styles.description}>
             Serve thousands of different websites from a single Next.js installation
