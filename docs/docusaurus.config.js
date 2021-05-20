@@ -23,7 +23,6 @@ module.exports = {
           position: 'left',
         },
         {
-          type: 'doc',
           to: '/docs/tutorial-basics/getting-started',
           position: 'left',
           label: 'Tutorial',
