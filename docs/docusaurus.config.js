@@ -2,12 +2,12 @@
 module.exports = {
   title: 'Krabs',
   tagline: 'Express.js middleware for multi-tenant Next.js applications',
-  url: 'https://krabs.micheleriva.it',
-  baseUrl: '/',
+  url: 'https://micheleriva.github.io/krabs',
+  baseUrl: '/krabs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Michele Riva', // Usually your GitHub org/user name.
+  organizationName: 'micheleriva', // Usually your GitHub org/user name.
   projectName: 'krabs', // Usually your repo name.
   themeConfig: {
     navbar: {
