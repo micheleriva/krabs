@@ -149,7 +149,7 @@ going to http://dev.pizza.local.website-1.com/about and http://local.website-2.c
 
 # Documentation
 
-You can find the full documentation (with real code examples) on [GitBook](https://micheleriva.gitbook.io/krabs/)!
+You can find the full documentation (with real code examples) [here](https://micheleriva.github.io/krabs/)!
 
 # License
 
