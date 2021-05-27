@@ -21,6 +21,7 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "express": "^4.17.1",
+    "fast-memoize": "^2.5.2",
     "krabs": "^0.0.8",
     "next": "^10.0.4"
   },
