@@ -1,11 +1,25 @@
 import { Request, Response } from 'express';
-import * as chalk from 'chalk';
+import { default as chalk } from 'chalk';
 import { parse } from 'url';
 import { getTenantConfig } from './config';
 import { Config } from './config/config.d';
 import findTenant from './tenants/findTenant';
 import resolveRoutes from './routes/resolve';
 import { currentEnv, safeEnv } from './env';
+
+if (!currentEnv) {
+  const warningMessage = `
+    \u{26A0}\u{FE0F} ${chalk.bold(' Warning ')}
+    The ${chalk.bold('NODE_ENV')} environment variable is ${chalk.bold('undefined')}.
+    Krabs will run in ${chalk.bold(safeEnv)} mode, meaning it will only serve
+    tenants domains set as ${chalk.bold(safeEnv)} domains.
+  `
+    .split('\n')
+    .map((line) => line.trimLeft())
+    .join('\n');
+
+  console.warn(chalk.yellow(warningMessage));
+}
 
 async function krabs(
   req: Request,
@@ -14,20 +28,6 @@ async function krabs(
   app: any,
   config?: Config,
 ): Promise<void> {
-  if (!currentEnv) {
-    const warningMessage = `
-      \u{26A0}\u{FE0F} ${chalk.bold(' Warning ')}
-      The ${chalk.bold('NODE_ENV')} environment variable is ${chalk.bold('undefined')}.
-      Krabs will run in ${chalk.bold(safeEnv)} mode, meaning it will only serve
-      tenants domains under set as ${chalk.bold(safeEnv)} domains.
-    `
-      .split('\n')
-      .map((line) => line.trimLeft())
-      .join('\n');
-
-    console.warn(chalk.yellow(warningMessage));
-  }
-
   const { tenants } = config || (await getTenantConfig());
   const { hostname } = req;
   const parsedUrl = parse(req.url, true);
