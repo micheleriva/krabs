@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
-import { default as chalk } from 'chalk';
+import * as chalk from 'chalk';
 import { parse } from 'url';
-import path from 'path';
+import * as path from 'path';
 import memoize from 'fast-memoize';
 import { getTenantConfig } from './config';
 import { Config } from './config/config.d';
