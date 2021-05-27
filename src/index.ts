@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { default as chalk } from 'chalk';
 import { parse } from 'url';
+import path from 'path';
 import memoize from 'fast-memoize';
 import { getTenantConfig } from './config';
 import { Config } from './config/config.d';
@@ -43,6 +44,20 @@ async function krabs(
 
   if (pathname?.startsWith('/_next')) {
     handle(req, res);
+    return;
+  }
+
+  if (pathname?.startsWith('/api/')) {
+    try {
+      const APIPath = pathname.replace(/^\/api\//, '');
+      const { default: APIhandler } = require(path.join(
+        process.cwd(),
+        `pages/${tenant.name}/api/${APIPath}`,
+      ));
+      APIhandler(req, res);
+    } catch (_) {
+      handle(req, res);
+    }
     return;
   }
 
