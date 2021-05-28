@@ -2,7 +2,7 @@
 
 [![Build Status](https://www.travis-ci.com/micheleriva/krabs.svg?branch=main)](https://www.travis-ci.com/micheleriva/krabs)
 [![codecov](https://codecov.io/gh/micheleriva/krabs/branch/main/graph/badge.svg?token=s46QYu6uUJ)](https://codecov.io/gh/micheleriva/krabs)
-[![NPM Downloads](https://img.shields.io/npm/dt/krabs)](https://www.npmjs.com/package/krabs)
+[![NPM Downloads](https://img.shields.io/npm/dt/krabs)](https://w,ww.npmjs.com/package/krabs)
 
 **Krabs** is an enterprise-ready Express.js middleware for serving **thousands** of different websites from a single Next.js instance.
 
@@ -51,7 +51,7 @@ You can watch a video introduction on **YouTube**:
   <img src="/misc/krabs-yt-intro.png" />
 </a>
 
-Let's say that we want to support three different websites with just one Next.js instance, and serve them using just one Express.js server.
+Let's say that we want to support two different websites with just one Next.js instance, and serve them using just one Express.js server.
 Write the following configuration inside a `.krabs.js` or `.krabs.config.js` file inside of the root of your project:
 
 ```js
@@ -153,7 +153,7 @@ You can find the full documentation (with real code examples) [here](https://mic
 
 # License
 
-Krabs is _free as freedom_ and licensed under the [**GPL V3** license](/LICENSE.md).
+Krabs is _free as in freedom_ and licensed under the [**GPL V3** license](/LICENSE.md).
 
 <br />
 
