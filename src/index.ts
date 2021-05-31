@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as chalk from 'chalk';
 import { parse } from 'url';
 import * as path from 'path';
-import { default as memoize } from 'fast-memoize';
+import moize from 'moize';
 import { getTenantConfig } from './config';
 import { Config } from './config/config.d';
 import findTenant from './tenants/findTenant';
@@ -30,11 +30,13 @@ async function krabs(
   app: any,
   config?: Config,
 ): Promise<void> {
-  const { tenants } = await (await memoize(async () => config ?? (await getTenantConfig())))();
+  const { tenants } = await (
+    await moize.promise(async () => config ?? (await getTenantConfig()))
+  )();
   const { hostname } = req;
   const parsedUrl = parse(req.url, true);
   const { pathname = '/', query } = parsedUrl;
-  const tenant = (await memoize(() => findTenant(tenants, hostname)))();
+  const tenant = (await moize(() => findTenant(tenants, hostname)))();
 
   if (!tenant) {
     res.status(500);

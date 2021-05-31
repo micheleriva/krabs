@@ -2652,6 +2652,14 @@ chalk@4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chalk@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
+  integrity sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 chokidar@2.1.8, chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
@@ -3647,6 +3655,11 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
+fast-memoize@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
+  integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
+
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
@@ -4416,6 +4429,17 @@ klona@^2.0.3:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
+krabs@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.12.tgz#0212d36d776dfe1ba32aed4c6ebba000941bd46c"
+  integrity sha512-pNPGmOI59bkKRwtVrh/b8FPMl3OR8mWmGyU+/yuWDumt4x4fDbS4TJnnb+DCrW/cfSzw++1VrRq4xpp6DLuLrQ==
+  dependencies:
+    chalk "^4.1.1"
+    express "^4.17.1"
+    fast-memoize "^2.5.2"
+    krabs "^0.0.8"
+    next "^10.0.4"
+
 krabs@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.2.tgz#b17ee1adfc70e8d0963851b2c5487a84f49d42c5"
@@ -4424,10 +4448,10 @@ krabs@^0.0.2:
     express "^4.17.1"
     next "^10.0.4"
 
-krabs@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.5.tgz#6b93e1763edcb0e62aee2a9afa1e9402f8e9232c"
-  integrity sha512-kRvAzfYoyspKR7uuOuZvfPtjZbha6/vSptIcS2TKhPkp3fzstiJf6UpXKm9j3jhESSmetqqvOBx2H5OXQHT1LA==
+krabs@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.8.tgz#04d633abe43f6225f8526ab76c6567a779593386"
+  integrity sha512-HdFsQKidWDN3B2HaEkBk1RmJkMyvceS5461Xy7ikkoZeQGT3/hg+mPPHRh/+3NiXDi4HBgvOAqNJDsGi2Dm9SQ==
   dependencies:
     express "^4.17.1"
     krabs "^0.0.2"

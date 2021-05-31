@@ -12,6 +12,7 @@
   "license": "GPL-3.0",
   "private": false,
   "scripts": {
+    "dev": "NODE_ENV=dev ts-node ./dev/index.ts",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
     "lint": "eslint --fix .",
     "test": "NODE_ENV=test && jest --coverage",
@@ -21,8 +22,8 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "express": "^4.17.1",
-    "fast-memoize": "^2.5.2",
     "krabs": "^0.0.8",
+    "moize": "^6.0.3",
     "next": "^10.0.4"
   },
   "devDependencies": {
