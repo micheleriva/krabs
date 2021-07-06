@@ -1,19 +1,24 @@
 const getImage = (tenant) => {
   switch (tenant) {
     case 'local.cabbage.eat.com':
-    case 'cabbage.krabs.eat.micheleriva.com':
       return 'https://images.unsplash.com/photo-1592587828054-10f56e3350db?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80';
     case 'local.pumpkin.eat.com':
-    case 'pumpkin.krabs.eat.micheleriva.com':
       return 'https://images.unsplash.com/photo-1506917728037-b6af01a7d403?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80';
     default:
       return 'https://images.unsplash.com/photo-1567306295427-94503f8300d7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1326&q=80';
   }
 };
 
-function Index(props) {
-  const image = getImage(props.tenant);
+export function getServerSideProps(ctx) {
+  return {
+    props: {
+      hostname: ctx.req.hostname,
+    },
+  };
+}
 
+function Index(props) {
+  const image = getImage(props.hostname);
   return (
     <div>
       <div>

@@ -3655,11 +3655,6 @@ fast-json-stable-stringify@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
-fast-memoize@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
-  integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
-
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
@@ -4429,14 +4424,13 @@ klona@^2.0.3:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
-krabs@^0.0.12:
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.12.tgz#0212d36d776dfe1ba32aed4c6ebba000941bd46c"
-  integrity sha512-pNPGmOI59bkKRwtVrh/b8FPMl3OR8mWmGyU+/yuWDumt4x4fDbS4TJnnb+DCrW/cfSzw++1VrRq4xpp6DLuLrQ==
+krabs@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.14.tgz#af110601f017dbdaf1613ed57eb1fcd313942782"
+  integrity sha512-Syg2jlRa1lcDh+y5hcL3nGwgdekkUpUvbUgmAfBQ2OFjHhGr5310n7WYTXaAn2RUUdjPpovBwkMHOiqI/f/DAQ==
   dependencies:
     chalk "^4.1.1"
     express "^4.17.1"
-    fast-memoize "^2.5.2"
     krabs "^0.0.8"
     next "^10.0.4"
 

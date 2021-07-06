@@ -1,6 +1,6 @@
 const express = require('express');
 const next = require('next');
-const krabs = require('../../dist/index').default;
+const krabs = require('krabs').default;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 
