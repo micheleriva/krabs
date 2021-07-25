@@ -6,8 +6,6 @@ import { Config } from '../utils/config/config';
 import findTenant from '../utils/tenants/findTenant';
 import resolveRoutes from '../utils/routes/resolve';
 
-type Merge<A, B> = { [K in keyof (A | B)]: K extends keyof B ? B[K] : A[K] };
-
 if (!currentEnv) {
   const warningMessage = `
     \u{26A0}\u{FE0F} ${chalk.bold(' Warning ')}
@@ -44,7 +42,7 @@ export default async function krabs(
     });
   }
 
-  const route = resolveRoutes(tenant?.name!, pathName);
+  const route = resolveRoutes(tenant?.name as string, pathName);
 
   if (route) {
     // @ts-ignore
