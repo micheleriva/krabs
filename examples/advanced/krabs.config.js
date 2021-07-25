@@ -4,7 +4,7 @@ module.exports = {
       name: 'englishsetterlovers',
       domains: [
         {
-          dev: 'local.englishsetterlovers.com',
+          development: 'local.englishsetterlovers.com',
           prod: 'englishsetterlovers.krabs.micheleriva.com',
         },
       ],
@@ -13,7 +13,7 @@ module.exports = {
       name: 'veggies',
       domains: [
         {
-          dev: /local\.(cabbage|pumpkin|veggies)\.eat\.com/,
+          development: /local\.(cabbage|pumpkin|veggies)\.eat\.com/,
           prod: /(cabbage|pumpkin|veggies)\.krabs\.eat\.micheleriva\.com/,
         },
       ],
