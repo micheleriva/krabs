@@ -2,6 +2,11 @@
   "name": "krabs",
   "version": "0.0.14",
   "description": "Multitenant middleware for Next.js",
+  "workspaces": [
+    "packages/express-krabs",
+    "packages/fastify-krabs",
+    "packages/utils"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -10,19 +15,19 @@
   "repository": "https://github.com/MicheleRiva/krabs",
   "author": "Michele Riva <ciao@micheleriva.it>",
   "license": "GPL-3.0",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "NODE_ENV=dev ts-node ./dev/index.ts",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
     "lint": "eslint --fix .",
     "test": "NODE_ENV=test && jest --coverage",
     "prepare": "npm run test && npm run build",
-    "build": "tsc src/index.ts --outDir dist --declarationDir dist --declaration true"
+    "build:express": "tsc packages/express-krabs/index.ts --outDir packages/express-krabs/dist --declarationDir packages/express-krabs/dist --declaration true",
+    "build:fastify": "tsc packages/express-fastify/index.ts --outDir packages/express-fastify/dist --declarationDir packages/express-fastify/dist --declaration true"
   },
   "dependencies": {
     "chalk": "^4.1.1",
     "express": "^4.17.1",
-    "krabs": "^0.0.8",
     "next": "^10.0.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { Tenant, Domain, DomainSpec } from '../config/config.d';
+import { Tenant, Domain, DomainSpec } from '../config/config';
 import 'array-flat-polyfill';
 
 export function concatDomains(acc: string[], domain: Domain): string[] {

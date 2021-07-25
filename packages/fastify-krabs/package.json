@@ -1,0 +1,17 @@
+{
+  "name": "fastify-krabs",
+  "version": "0.0.1",
+  "description": "Multitenant middleware for Next.js and Fastify",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/MicheleRiva/krabs",
+  "author": "Michele Riva <ciao@micheleriva.it>",
+  "license": "GPL-3.0",
+  "private": false,
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "express": "^4.17.1"
+  }
+}

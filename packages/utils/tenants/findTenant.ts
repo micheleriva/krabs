@@ -1,4 +1,4 @@
-import { Tenant, DomainSpec } from '../config/config.d';
+import { Tenant, DomainSpec } from '../config/config';
 import { safeEnv } from '../env';
 
 export function findTenant(tenants: Tenant[], hostname: string): Tenant | undefined {

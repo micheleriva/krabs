@@ -1,6 +1,6 @@
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { Config, ConfigEntry } from './config.d';
+import { Config, ConfigEntry } from './config';
 
 export function getCwdConfig() {
   const validConfigNames = ['.krabs.js', 'krabs.config.js'];

@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import * as chalk from 'chalk';
 import { parse } from 'url';
 import * as path from 'path';
-import { getTenantConfig } from './config';
-import { Config } from './config/config.d';
-import findTenant from './tenants/findTenant';
-import resolveRoutes from './routes/resolve';
-import { currentEnv, safeEnv } from './env';
+import { getTenantConfig } from '../utils/config';
+import { Config } from '../utils/config/config';
+import findTenant from '../utils/tenants/findTenant';
+import resolveRoutes from '../utils/routes/resolve';
+import { currentEnv, safeEnv } from '../utils/env';
 
 if (!currentEnv) {
   const warningMessage = `

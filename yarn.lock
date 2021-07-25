@@ -5409,23 +5409,6 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
-krabs@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.2.tgz#b17ee1adfc70e8d0963851b2c5487a84f49d42c5"
-  integrity sha512-adpQb6wGPKbZhSK6OOdBmlZbNZqPJ1GYd51iimq+Vt6+CQ9rL4P8cv/EfxOsJtxOqfP4+qu3cUB9T8M9a8do3w==
-  dependencies:
-    express "^4.17.1"
-    next "^10.0.4"
-
-krabs@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/krabs/-/krabs-0.0.8.tgz#04d633abe43f6225f8526ab76c6567a779593386"
-  integrity sha512-HdFsQKidWDN3B2HaEkBk1RmJkMyvceS5461Xy7ikkoZeQGT3/hg+mPPHRh/+3NiXDi4HBgvOAqNJDsGi2Dm9SQ==
-  dependencies:
-    express "^4.17.1"
-    krabs "^0.0.2"
-    next "^10.0.4"
-
 language-subtag-registry@~0.3.2:
   version "0.3.21"
   resolved "https://registry.yarnpkg.com/language-subtag-registry/-/language-subtag-registry-0.3.21.tgz#04ac218bea46f04cb039084602c6da9e788dd45a"
