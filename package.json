@@ -24,7 +24,7 @@
     "prepare": "npm run test && npm run build",
     "build": "yarn build:express && yarn build:fastify",
     "build:express": "tsc packages/express-krabs/index.ts --outDir packages/express-krabs/dist --declarationDir packages/express-krabs/dist --declaration true",
-    "build:fastify": "tsc packages/express-fastify/index.ts --outDir packages/express-fastify/dist --declarationDir packages/express-fastify/dist --declaration true"
+    "build:fastify": "tsc packages/fastify-krabs/index.ts --outDir packages/fastify-krabs/dist --declarationDir packages/fastify-krabs/dist --declaration true"
   },
   "dependencies": {
     "chalk": "^4.1.1",
