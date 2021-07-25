@@ -1,6 +1,6 @@
 {
   "name": "fastify-krabs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Multitenant middleware for Next.js and Fastify",
   "main": "./dist/index.js",
   "files": [
