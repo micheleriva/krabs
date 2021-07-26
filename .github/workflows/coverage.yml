@@ -1,4 +1,4 @@
-name: Running Code Coverage
+name: Build Status
 
 on: [push, pull_request]
 
