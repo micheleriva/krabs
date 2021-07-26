@@ -7,7 +7,6 @@
 **Krabs** is an enterprise-ready Express.js/Fastify middleware for serving **thousands** of different websites from a single Next.js instance.
 
 - [Installation](#installation)
-- [Roadmap](#roadmap)
 - [Things to know](#things-to-know)
 - [Installation](#installation)
 - [Getting started](#getting-started)
@@ -37,18 +36,6 @@ yarn add fastify-krabs
 
 npm insall --save fastify-krabs
 ```
-
-# Roadmap
-
-| Feature                  | Status      |
-| ------------------------ | ----------- |
-| Multiple domains support | ✅ Released |
-| Regex-based domains      | ✅ Released |
-| Dynamic paths            | ✅ Released |
-| Tenant props injection   | ✅ Released |
-| Async config file        | ✅ Released |
-
-Overall status: 🎉 production ready
 
 # Things to know
 
