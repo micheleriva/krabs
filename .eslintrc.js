@@ -44,5 +44,5 @@ module.exports = {
     'react/no-unescaped-entities': 0,
   },
   plugins: ['simple-import-sort', 'jest'],
-  ignorePatterns: ['node_modules'],
+  ignorePatterns: ['node_modules', '**/node_modules/**'],
 };
