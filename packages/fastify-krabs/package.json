@@ -8,7 +8,7 @@
   ],
   "repository": "https://github.com/MicheleRiva/krabs",
   "author": "Michele Riva <ciao@micheleriva.it>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "chalk": "^4.1.1",

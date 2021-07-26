@@ -152,7 +152,7 @@ You can find the full documentation (with real code examples) [here](https://mic
 
 # License
 
-Krabs is _free as in freedom_ and licensed under the [**GPL V3** license](/LICENSE.md).
+Krabs is _free as in freedom_ and licensed under the [**MIT** license](/LICENSE.md).
 
 <br />
 
