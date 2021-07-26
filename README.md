@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/micheleriva/krabs/branch/main/graph/badge.svg?token=s46QYu6uUJ)](https://codecov.io/gh/micheleriva/krabs)
 [![NPM Downloads](https://img.shields.io/npm/dt/krabs)](https://w,ww.npmjs.com/package/krabs)
 
-**Krabs** is an enterprise-ready Express.js middleware for serving **thousands** of different websites from a single Next.js instance.
+**Krabs** is an enterprise-ready Express.js/Fastify middleware for serving **thousands** of different websites from a single Next.js instance.
 
 - [Installation](#installation)
 - [Roadmap](#roadmap)
@@ -18,12 +18,24 @@
 
 Krabs is available on **npm** and can be installed as follows:
 
+**For Express.js**
+
 ```bash
 yarn add krabs
 
 # or
 
 npm install --save krabs
+```
+
+**For Fastify**
+
+```bash
+yarn add fastify-krabs
+
+# or
+
+npm insall --save fastify-krabs
 ```
 
 # Roadmap
