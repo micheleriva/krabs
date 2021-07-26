@@ -8,11 +8,6 @@
     "packages/fastify-krabs",
     "packages/utils"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
   "repository": "https://github.com/MicheleRiva/krabs",
   "author": "Michele Riva <ciao@micheleriva.it>",
   "license": "MIT",
@@ -26,11 +21,6 @@
     "build": "yarn build:express && yarn build:fastify",
     "build:express": "tsc packages/express-krabs/index.ts --outDir packages/express-krabs/dist --declarationDir packages/express-krabs/dist --declaration true",
     "build:fastify": "tsc packages/fastify-krabs/index.ts --outDir packages/fastify-krabs/dist --declarationDir packages/fastify-krabs/dist --declaration true"
-  },
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "express": "^4.17.1",
-    "next": "^10.0.4"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.12.11",
