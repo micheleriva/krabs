@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+import { bold, yellow } from 'chalk';
 import type { FastifyRequest, FastifyReply } from 'fastify';
 import { currentEnv, safeEnv } from '../utils/env';
 import { getTenantConfig } from '../utils/config';
@@ -8,16 +8,16 @@ import resolveRoutes from '../utils/routes/resolve';
 
 if (!currentEnv) {
   const warningMessage = `
-    \u{26A0}\u{FE0F} ${chalk.bold(' Warning ')}
-    The ${chalk.bold('NODE_ENV')} environment variable is ${chalk.bold('undefined')}.
-    Krabs will run in ${chalk.bold(safeEnv)} mode, meaning it will only serve
-    tenants domains set as ${chalk.bold(safeEnv)} domains.
+    \u{26A0}\u{FE0F} ${bold(' Warning ')}
+    The ${bold('NODE_ENV')} environment variable is ${bold('undefined')}.
+    Krabs will run in ${bold(safeEnv)} mode, meaning it will only serve
+    tenants domains set as ${bold(safeEnv)} domains.
   `
     .split('\n')
     .map((line) => line.trimLeft())
     .join('\n');
 
-  console.warn(chalk.yellow(warningMessage));
+  console.warn(yellow(warningMessage));
 }
 
 export default async function krabs(
