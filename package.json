@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Multitenant middleware for Next.js",
   "workspaces": [
+    "packages/docs",
     "packages/express-krabs",
     "packages/fastify-krabs",
     "packages/utils"
