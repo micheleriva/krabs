@@ -18,7 +18,10 @@ function HomepageHeader() {
         <p>*Tested up to 3M tenants!</p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs/intro">
-            Krabs Tutorial - 5min ⏱️
+            Krabs Tutorial - 5min&nbsp;
+            <span role="image" aria-label="5min tutorial">
+              ⏱️
+            </span>
           </Link>
         </div>
         <div className={styles['krabs-image']}>
