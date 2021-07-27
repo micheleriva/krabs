@@ -22,8 +22,8 @@ if (!currentEnv) {
 export default async function krabs(
   request: FastifyRequest,
   reply: FastifyReply,
-  app: any,
   handle: any,
+  app: any,
   config?: Config): Promise<void> {
 
   const { tenants } = config ?? (await getTenantConfig());
