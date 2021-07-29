@@ -13,6 +13,7 @@ export type Tenant = {
 export type Config = {
   tenants: Tenant[];
   port: number | string;
+  enableVhostHeader: boolean;
 };
 
 export type ConfigEntry = (() => Config) | (() => Promise<Config>) | Config;

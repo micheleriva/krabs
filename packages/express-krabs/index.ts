@@ -28,11 +28,16 @@ async function krabs(
   app: any,
   config?: Config,
 ): Promise<void> {
-  const { tenants } = config ?? (await getTenantConfig());
+  const { tenants, enableVhostHeader } = config ?? (await getTenantConfig());
+
   const { hostname } = req;
+  const vhostHeader = enableVhostHeader && req.headers['x-vhost'] as string;
+  const host = vhostHeader || hostname;
+
   const parsedUrl = parse(req.url, true);
   const { pathname = '/', query } = parsedUrl;
-  const tenant = findTenant(tenants, hostname);
+
+  const tenant = findTenant(tenants, host);
 
   if (!tenant) {
     res.status(500);
