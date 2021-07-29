@@ -26,14 +26,16 @@ export default async function krabs(
   app: any,
   config?: Config): Promise<void> {
 
-  const { tenants } = config ?? (await getTenantConfig());
+  const { tenants, enableVhostHeader } = config ?? (await getTenantConfig());
     
+  const vhostHeader = enableVhostHeader && request.headers['x-vhost'] as string;
   const rawHostname = request.hostname;
   const pathName = request.url;
   const query = request.query;
 
   const hostname = rawHostname.replace(/:\d+$/, '');
-  const tenant = findTenant(tenants, hostname);
+  const host = vhostHeader || hostname;
+  const tenant = findTenant(tenants, host);
 
   if (!tenant) {
     reply.status(500).send({
