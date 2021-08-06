@@ -1,8 +1,8 @@
 {
   "name": "express-krabs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Multitenant middleware for Next.js",
-  "main": "./dist/index.js",
+  "main": "./dist/express-krabs/index.js",
   "files": [
     "dist"
   ],
