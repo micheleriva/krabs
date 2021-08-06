@@ -8,7 +8,8 @@
       "packages/express-krabs",
       "packages/fastify-krabs",
       "packages/utils",
-      "packages/e2e"
+      "packages/e2e-express",
+      "packages/e2e-fastify"
     ]
   },
   "repository": "https://github.com/MicheleRiva/krabs",
@@ -22,8 +23,9 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.js",
     "lint": "eslint --fix .",
     "test": "NODE_ENV=test && jest --coverage",
-    "e2e:express": "yarn workspace krabs-e2e run e2e-express",
-    "e2e": "yarn build && yarn e2e:express && yarn e2e:fastify",
+    "e2e:express": "yarn workspace e2e-express run e2e-express",
+    "e2e:fastify": "yarn workspace e2e-fastify run e2e-fastify",
+    "e2e": "yarn build && yarn e2e:express",
     "prepare": "npm run test && npm run build",
     "build": "yarn build:express && yarn build:fastify",
     "build:express": "tsc packages/express-krabs/index.ts --outDir packages/express-krabs/dist --declarationDir packages/express-krabs/dist --declaration true",

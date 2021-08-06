@@ -1,17 +1,15 @@
 {
-  "name": "krabs-e2e",
+  "name": "e2e-fastify",
   "version": "0.0.1",
-  "description": "End-to-end tests for Krabs",
+  "description": "End-to-end tests for Krabs + Fastify",
   "main": "index.js",
   "repository": "https://github.com/micheleriva/krabs",
   "author": "Michele Riva <ciao@micheleriva.it>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "cy:run": "cypress run",
-    "e2e-express": "start-server-and-test start:express 3300 cy:run",
+    "cy:run": "cypress run --spec tests/fastify.e2e.spec.js",
     "e2e-fastify": "start-server-and-test start:fastify 3300 cy:run",
-    "start:express": "cd express-app && yarn && yarn build && yarn start",
     "start:fastify": "cd fastify-app && yarn && yarn build && yarn start"
   },
   "dependencies": {

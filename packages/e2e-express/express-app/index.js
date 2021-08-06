@@ -14,7 +14,7 @@ async function main() {
     server
       .get('/', (req, res) => res.send('200 status code for Cypress'))
       .get('*', (req, res) => krabs(req, res, handle, app))
-      .listen(3300, () => console.log('server ready'));
+      .listen(3400, () => console.log('server ready'));
   } catch (err) {
     console.log(err.stack);
   }
