@@ -12,5 +12,10 @@
   "private": false,
   "dependencies": {
     "fastify": "^3.19.2"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "next": "11.0.0"
   }
 }
