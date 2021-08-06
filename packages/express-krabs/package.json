@@ -1,5 +1,5 @@
 {
-  "name": "express-krabs",
+  "name": "krabs",
   "version": "0.1.2",
   "description": "Multitenant middleware for Next.js",
   "main": "./dist/express-krabs/index.js",
