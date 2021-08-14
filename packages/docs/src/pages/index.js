@@ -25,7 +25,7 @@ function HomepageHeader() {
           </Link>
         </div>
         <div className={styles['krabs-image']}>
-          <img src="/krabs/img/krabs-small.png" alt="Mr Krabs" />
+          <img src="/img/krabs-small.png" alt="Mr Krabs" />
         </div>
       </div>
     </header>
