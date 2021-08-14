@@ -3,7 +3,7 @@ module.exports = {
   title: 'Krabs',
   tagline: 'Express.js middleware for multi-tenant Next.js applications',
   url: 'https://micheleriva.github.io/krabs',
-  baseUrl: '/krabs/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
