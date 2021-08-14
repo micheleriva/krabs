@@ -3,7 +3,7 @@ sidebar_position: 1
 title: Intro
 ---
 
-Krabs is an Express.js middleware that allows you to serve hundreds of different websites using only one Express.js and Next.js instance.
+Krabs is an Express.js/Fastify middleware that allows you to serve hundreds of different websites using only one Express.js/Fastify and Next.js instance.
 
 > Multitenancy is a reference to the mode of operation of software where multiple independent instances of one or multiple applications operate in a shared environment. The instances (tenants) are logically isolated, but physically integrated. ([source](https://www.gartner.com/en/information-technology/glossary/multitenancy#:~:text=Multitenancy%20is%20a%20reference%20to,logically%20isolated%2C%20but%20physically%20integrated.))
 
@@ -27,7 +27,7 @@ Big corporates may also be interested in adopting a multi-tenant approach for th
 There are some caveats you have to keep in mind when you're working with Krabs and Next.js.
 
 **You have to set up a custom server.** <br />
-Krabs is an express.js middleware, so it requires a custom Express.js server to run. This will make Vercel deployments not available. Alternatives are DigitalOcean Apps, Heroku, or your custom server.
+Krabs is an Express.js/Fastify middleware, so it requires a custom Express.js/Fastify server to run. This will make Vercel deployments not available. Alternatives are DigitalOcean Apps, Heroku, or your custom server.
 
 **Common entry points** <br />
 Both `_document` and `_app` pages will be common for all of your websites.
