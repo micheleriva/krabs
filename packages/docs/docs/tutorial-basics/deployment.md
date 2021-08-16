@@ -17,7 +17,7 @@ Depending on where you want to host your app, there might be some differences in
 To build your Express.js + Krabs application, you just need to run the `yarn next build` command,  which creates an optimized production build for the Next.js pages.
 Now you're able to start your Express.js server with a `NODE_ENV=production` environment variable, and you're ready to go.
 
-## Deployiment
+## Deployment
 
 Deploying Express.js + Krabs is not different from deploying Express.js alone. Please refer to the following guides for releasing your webserver to production:
 
