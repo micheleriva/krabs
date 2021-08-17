@@ -15,3 +15,6 @@ jobs:
         with:
           build: npm run build
           start: npm run e2e
+          browser: chrome
+          headless: true
+          wait-on: 'http://localhost:3400'
