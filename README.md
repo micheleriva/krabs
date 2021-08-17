@@ -1,6 +1,7 @@
 <img src="/misc/krabs-cover.png" />
 
 [![Build Status](https://github.com/micheleriva/krabs/actions/workflows/coverage.yml/badge.svg)](https://github.com/micheleriva/krabs/actions/workflows/coverage.yml)
+[![e2e tests](https://github.com/micheleriva/krabs/actions/workflows/e2e.yml/badge.svg)](https://github.com/micheleriva/krabs/actions/workflows/e2e.yml)
 [![codecov](https://codecov.io/gh/micheleriva/krabs/branch/main/graph/badge.svg?token=s46QYu6uUJ)](https://codecov.io/gh/micheleriva/krabs)
 [![NPM Downloads](https://img.shields.io/npm/dt/krabs)](https://www.npmjs.com/package/krabs)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
