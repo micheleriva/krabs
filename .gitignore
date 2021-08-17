@@ -1,6 +1,7 @@
 coverage
 packages/express-krabs/dev
 packages/fastify-krabs/dev
+cypress
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,osx,visualstudiocode,intellij,windows,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,osx,visualstudiocode,intellij,windows,linux
