@@ -5,20 +5,10 @@ import { getTenantConfig } from '../utils/config';
 import { Config } from '../utils/config/config';
 import findTenant from '../utils/tenants/findTenant';
 import resolveRoutes from '../utils/routes/resolve';
-import { currentEnv, safeEnv } from '../utils/env';
+import { currentEnv, environmentWarningMessage } from '../utils/env';
 
 if (!currentEnv) {
-  const warningMessage = `
-    \u{26A0}\u{FE0F} (' Warning ')
-    The ('NODE_ENV') environment variable is ('undefined').
-    Krabs will run in (${safeEnv}) mode, meaning it will only serve
-    tenants domains set as (${safeEnv}) domains.
-  `
-    .split('\n')
-    .map((line) => line.trimLeft())
-    .join('\n');
-
-  console.warn(warningMessage);
+  console.warn(environmentWarningMessage);
 }
 
 async function krabs(
