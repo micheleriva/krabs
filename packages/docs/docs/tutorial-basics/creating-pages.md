@@ -13,7 +13,6 @@ inside of our default `pages/` directory, we will need to create two new folders
 ```
 + pages/
 |   +-- _app.js
-|   +-- _index.js
 |   +-- website-1/
 |   +-- website-2/
 ```
@@ -30,7 +29,6 @@ we will just need to add those pages inside of the **website-1** folder as we've
 ```
 + pages/
 |   +-- _app.js
-|   +-- _index.js
 |   +-- website-1/
 |   |     + index.js
 |   |     + blog/
