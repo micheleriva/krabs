@@ -22,7 +22,7 @@
 
 <div align="center">
   <a href="https://graphcms.com?utm_source=https://github.com/micheleriva/krabs">
-    <img src="/misc/sponsors/sponsor-graphcms.png" alt="GraphCMS" />
+    <img src="/misc/sponsors/sponsor-graphcms.svg" alt="GraphCMS" target="_blank" width="250px" />
   </a>
 </div>
 
