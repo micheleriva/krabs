@@ -24,6 +24,11 @@
   <a href="https://graphcms.com?utm_source=https://github.com/micheleriva/krabs">
     <img src="/misc/sponsors/sponsor-graphcms.svg" alt="GraphCMS" target="_blank" width="250px" />
   </a>
+
+  <br />
+  <a align="center" href="https://github.com/sponsors/micheleriva" target="_blank">
+    <b>Become a sponsor</b>
+  </a>
 </div>
 
 # Installation
