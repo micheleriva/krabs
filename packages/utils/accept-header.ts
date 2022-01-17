@@ -116,8 +116,7 @@ function parse(raw: string, preferences: string[] | undefined, options: Options)
   const preferred: string[] = [];
   for (const selection of values) {
     if (selection === '*') {
-      // @ts-ignore
-      for (const [preference, value] of lowers) {
+      for (const [preference, value] of Array.from(lowers)) {
         if (!map.has(preference)) {
           preferred.push(value.orig);
         }

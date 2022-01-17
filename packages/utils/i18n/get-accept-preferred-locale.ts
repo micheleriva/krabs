@@ -7,10 +7,7 @@ export function getAcceptPreferredLocale(
 ) {
   const value = headers?.['accept-language'];
 
-  if (i18n.localeDetection !== false && value && !Array.isArray(value)) {
-    try {
-      return acceptLanguage(value, i18n.locales);
-      // eslint-disable-next-line no-empty
-    } catch (err) {}
+  if (!!i18n.localeDetection && value && !Array.isArray(value)) {
+   return acceptLanguage(value, i18n.locales);
   }
 }
