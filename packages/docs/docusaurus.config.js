@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'micheleriva', // Usually your GitHub org/user name.
   projectName: 'krabs', // Usually your repo name.
+  plugins: ['@orama/plugin-docusaurus'],
   themeConfig: {
     navbar: {
       title: 'Krabs',
