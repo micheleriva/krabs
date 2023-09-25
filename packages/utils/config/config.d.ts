@@ -8,7 +8,14 @@ type NonEmptyArray<A> = A[] & { 0: A };
 export type Tenant = {
   name: string;
   domains: NonEmptyArray<Domain>;
+  i18n?: I18NConfig;
 };
+
+export interface I18NConfig {
+  defaultLocale: string;
+  localeDetection?: false;
+  locales: string[];
+}
 
 export type Config = {
   tenants: Tenant[];

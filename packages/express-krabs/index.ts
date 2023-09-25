@@ -6,6 +6,8 @@ import { Config } from '../utils/config/config';
 import findTenant from '../utils/tenants/findTenant';
 import resolveRoutes from '../utils/routes/resolve';
 import { currentEnv, environmentWarningMessage } from '../utils/env';
+import { normalizeLocalePath } from '../utils/i18n/normalize-locale-path';
+import { getAcceptPreferredLocale } from '../utils/i18n/get-accept-preferred-locale';
 
 if (!currentEnv) {
   console.warn(environmentWarningMessage);
@@ -18,14 +20,18 @@ async function krabs(
   app: any,
   config?: Config,
 ): Promise<void> {
+  // @ts-ignore
+  req.locale = null;
+
   const { tenants, enableVhostHeader } = config ?? (await getTenantConfig());
 
   const { hostname } = req;
-  const vhostHeader = enableVhostHeader && req.headers['x-vhost'] as string;
+  const vhostHeader = enableVhostHeader && (req.headers['x-vhost'] as string);
   const host = vhostHeader || hostname;
 
   const parsedUrl = parse(req.url, true);
-  const { pathname = '/', query } = parsedUrl;
+
+  let { pathname = '/', query } = parsedUrl;
 
   const tenant = findTenant(tenants, host);
 
@@ -52,6 +58,32 @@ async function krabs(
       handle(req, res);
     }
     return;
+  }
+
+  if (
+    tenant?.i18n?.locales.length &&
+    tenant?.i18n?.defaultLocale &&
+    tenant?.i18n?.locales.includes(tenant?.i18n?.defaultLocale)
+  ) {
+    const newPath = normalizeLocalePath(pathname as string, tenant.i18n.locales);
+    const preferredLocale = getAcceptPreferredLocale(tenant.i18n, req.headers);
+
+    const detectedLocale = newPath?.detectedLocale || preferredLocale || tenant.i18n.defaultLocale;
+
+    if (
+      detectedLocale.toLowerCase() !== newPath?.detectedLocale &&
+      detectedLocale.toLowerCase() !== tenant.i18n.defaultLocale
+    ) {
+      const redirectUrl = `/${detectedLocale}${pathname}${parsedUrl.search ?? ''}`;
+      res.redirect(redirectUrl);
+    }
+
+    if (detectedLocale) {
+      // @ts-ignore
+      req.locale = detectedLocale;
+    }
+
+    pathname = newPath.pathname;
   }
 
   const route = resolveRoutes(tenant.name, String(pathname));
